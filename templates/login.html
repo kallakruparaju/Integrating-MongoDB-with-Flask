@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to top, #ffffff 00%, #1295d1 200%);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add padding to containers */
+        .container {
+            width: 35%;
+            padding: 100px;
+            border-radius: 15px;
+            background-color: lightblue;
+            border: 2px solid black;
+            box-shadow: 7px 4px 7px 2px #991cff;
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password],
+        input[type=email] {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus,
+        input[type=email]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Overwrite default styles of hr */
+        hr {
+            border: 1px solid #a33939;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for the submit button */
+        .loginbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .loginbtn:hover {
+            opacity: 1;
+            
+        }
+    </style>
+
+</head>
+<body> 
+   <form action="" method="post">   
+     <center>
+            <div class="container">
+                <h1>Login</h1>
+                   <div class="alert alert-secondary" role="alert">
+                      <p>{{ message }}</p>
+                    </div>
+                <hr>
+                <label for="email"><b>Email id</b></label>
+                <input type="email" placeholder="Enter Email Id" name="email_id" id="email" required>
+
+                <label for="InputPassword"><b>Password<b></label>
+                <input type="password" name="password" id="InputPassword" placeholder="Password" required>
+
+                <hr>
+                <button type="submit" class="loginbtn">Login</button>
+     </center>     
+   </form>
+</body>
+</html>
+
